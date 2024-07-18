@@ -20,9 +20,3 @@ Website ini dibangun untuk memperkenalkan diri saya sebagai seorang web develope
 - **Framework CSS**: Bootstrap
 - **Deployment**: Vercel
 
-## Cara Penggunaan
-
-1. Clone repositori ini:
-
-   ```bash
-   git clone https://github.com/nama-akun-anda/nama-repo.git
