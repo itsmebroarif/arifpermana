@@ -1,4 +1,4 @@
-# Portfolio Website - arifpermana.vercel.io
+# Portfolio Website - arifpermana.vercel.app
 
 Ini adalah repositori untuk kode sumber dari website portfolio pribadi saya, yang dapat diakses di [arifpermana.vercel.io](https://arifpermana.vercel.io).
 
