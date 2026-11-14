@@ -1,0 +1,14 @@
+{
+  "name": "Arif Permana Putrasuryana — Fullstack Software Engineer",
+  "short_name": "Arif Permana",
+  "description": "Portfolio Arif Permana Putrasuryana — Fullstack Software Engineer, Laravel, Vue.js, Quasar, SIMRS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8ff",
+  "theme_color": "#059669",
+  "lang": "id-ID",
+  "icons": [
+    { "src": "assets/img/favicon.png", "sizes": "any", "type": "image/png" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

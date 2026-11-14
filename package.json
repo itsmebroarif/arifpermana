@@ -1,0 +1,14 @@
+{
+  "name": "arifpermana-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Portfolio Arif Permana Putrasuryana — Material You Pastel (clean green). React islands untuk form kontak & form konsultasi produk (WhatsApp negotiation).",
+  "scripts": {
+    "build:react": "esbuild src/forms.jsx --bundle --minify --outfile=assets/js/forms.bundle.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
