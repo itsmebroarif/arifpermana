@@ -1,14 +1,16 @@
 {
   "name": "arifpermana-portfolio",
+  "version": "2.0.0",
   "private": true,
-  "version": "1.0.0",
-  "description": "Portfolio Arif Permana Putrasuryana — Material You Pastel (clean green). React islands untuk form kontak & form konsultasi produk (WhatsApp negotiation).",
+  "description": "Portfolio Arif Permana Putrasuryana — IT Solution Developer. Built with Next.js (App Router) + React, static export, SEO friendly.",
   "scripts": {
-    "build:react": "esbuild src/forms.jsx --bundle --minify --outfile=assets/js/forms.bundle.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "devDependencies": {
-    "esbuild": "^0.24.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }

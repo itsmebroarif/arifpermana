@@ -1,26 +1,40 @@
-# Portfolio Website - arifpermana.vercel.app
+# Portfolio Website — arifpermana.vercel.app
 
-Repositori untuk kode sumber website portfolio pribadi saya, yang dapat diakses di [arifpermana.vercel.app](https://arifpermana.vercel.app).
+Website portfolio pribadi saya (Arif Permana Putrasuryana), dibangun dengan **Next.js (App Router) + React 19** — static export, SEO friendly, mobile-first, bergaya **Material Professional Corporate** (emerald/slate/amber, clean & catchy).
 
 ## Deskripsi
 
-Website portfolio bergaya **Material Professional Corporate** yang memperkenalkan saya sebagai IT Solution Developer — berpengalaman mengerjakan **ERP, EMS, CMS, LMS, dan SIMRS** (Sistem Informasi Manajemen Rumah Sakit) serta berbagai aplikasi bisnis menggunakan **Laravel**, **Vue.js**, dan **Quasar Framework**.
+Portfolio sebagai **IT Solution Developer** yang berkecimpung di berbagai solusi teknologi — **ERP, EMS, CMS, LMS, SIMRS**, dan aplikasi bisnis — dibangun dengan **Laravel**, **Vue.js**, dan **Quasar Framework**.
 
-## Fitur Utama
+## Menjalankan
 
-- **Material Professional Corporate** — desain korporat yang bersih & catchy: palet emerald/slate/amber, tombol flat profesional, utility bar korporat, KPI band gelap, dan dashboard mock sebagai hero visual.
-- **Dashboard Mock Hero** — pratinjau SaaS/SIMRS bergaya korporat (titlebar, sidebar, KPI cards, bar chart) yang terbuat murni dari HTML/CSS — ringan, tajam di retina, tanpa beban library 3D.
-- **Tanpa Harga Kaku** — seluruh katalog produk tidak menampilkan harga; negosiasi dilakukan langsung saat diskusi di WhatsApp.
-- **Katalog Produk Sistem** — 11 produk (SIMRS, ERP, LMS, CMS, EMS, POS, Company Profile, E-Commerce, Landing Page, Web Profil, Undangan Digital) yang datanya diambil langsung dari [kafeinarts.web.id/products](https://kafeinarts.web.id/products/) (dengan snapshot lokal sebagai fallback) dan di-rebrand menjadi **Sistem**.
-- **Request Pembuatan Website** — tombol CTA dan tombol produk membuka **form konsultasi React** (useReducer + validasi) yang langsung melanjutkan ke WhatsApp **0858-1704-8266** untuk diskusi & negosiasi harga.
-- **Form Kontak → WhatsApp** — form kontak dibangun dengan **React (useState)** dan meneruskan pesan langsung ke WhatsApp untuk negosiasi.
-- **SEO Friendly & Mobile-First** — meta Open Graph/Twitter, JSON-LD `Person` & `WebSite`, `sitemap.xml`, `robots.txt`, `site.webmanifest`, semantic HTML, skip-link, dan `lang="id"`.
-- **Resume terbaru** — termasuk pengalaman sebagai Fullstack Software Engineer di **PT. Sintasi Persada Teknologi** (Project SIMRS, Laravel + Vue.js + Quasar).
+```bash
+npm install
+npm run dev      # development → http://localhost:3000
+npm run build    # static export → folder out/
+```
 
-## Teknologi yang Digunakan
+Deploy: Vercel (preset Next.js otomatis — `output: 'export'` menghasilkan static site dari folder `out/`).
 
-- **Frontend**: HTML5, CSS3 (custom design system — tanpa framework CSS), Vanilla JavaScript (ES6)
-- **Forms**: React 18 (hooks + state management), dibundle dengan esbuild → `assets/js/forms.bundle.js` (`npm run build:react`)
-- **State**: hooks — `useState` (form kontak) & `useReducer` (modal konsultasi produk)
-- **Icons**: Bootstrap Icons
-- **Deployment**: Vercel
+## Struktur
+
+```
+├─ app/                 # App Router pages (/, /about, /resume, /services, /contact) + layout + globals.css
+├─ components/          # Client components: SiteHeader, SiteFooter, MockShowcase, ProductCatalog,
+│                       #   ConsultModal, ContactForm, FabStack, UtilityBar, RevealOnScroll, Toast, PhotoWithFallback
+├─ lib/products.js      # Data snapshot + fetch live (kafeinarts.web.id) produk "Sistem"
+├─ public/assets/       # gambar, CV, sertifikat, favicon, bootstrap-icons, vendor CSS
+├─ public/{robots.txt, sitemap.xml, site.webmanifest}
+└─ next.config.mjs      # output: 'export' (static site)
+```
+
+## Fitur
+
+- **Full React (Next.js)** — setiap halaman prerender statis (SSG) + komponen interaktif di client.
+- **Material Professional Corporate** — utility bar korporat, solid white header dengan underline active-state, KPI band gelap, tombol flat profesional, CTA split panel dark dengan aksen amber.
+- **Dashboard Mock Hero** — pratinjau 7 UI produk (SIMRS, ERP, CMS, LMS, EMS, POS, Landing Page) sebagai tab interaktif — ringan (murni CSS), tajam di semua layar.
+- **Katalog Produk Sistem** — 11 produk (data diambil dari [kafeinarts.web.id/products](https://kafeinarts.web.id/products/), di-rebrand "Sistem"); filter Sistem/Website; tanpa harga — negosiasi langsung via WhatsApp.
+- **ConsultModal (useReducer)** — form konsultasi produk (preselect dari tombol kartu) → buka `wa.me/6285817048266` untuk diskusi & negosiasi.
+- **ContactForm (useState)** — validasi inline → pesan langsung terbuka di WhatsApp.
+- **SEO & Metadata API** — `metadata` per halaman (title template, description, OG, Twitter, canonical), JSON-LD `Person` + `WebSite`, `sitemap.xml`, `robots.txt`, `site.webmanifest`, `lang="id"`, skip-link.
+- **Home & About yang rapi** — hero split dengan dashboard mock, stack chips, KPI band; About dengan caption photo overlay, fact grid 2×2, dan cerita terstruktur.
