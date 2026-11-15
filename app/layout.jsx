@@ -4,9 +4,10 @@ import UtilityBar from '../components/UtilityBar';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 import FabStack from '../components/FabStack';
-import RevealOnScroll from '../components/RevealOnScroll';
-import ConsultModal from '../components/ConsultModal';
+import ProductExperience from '../components/ProductExperience';
 import { ToastHost } from '../components/Toast';
+import PWARegister from '../components/PWARegister';
+import InstallApp from '../components/InstallApp';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -42,6 +43,11 @@ export const metadata = {
     apple: [{ url: '/assets/img/apple-touch-icon.png' }],
   },
   manifest: '/site.webmanifest',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Arif AP',
+  },
   openGraph: {
     type: 'website',
     siteName: 'Arif Permana Putrasuryana',
@@ -101,7 +107,6 @@ export default function RootLayout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }} />
         <a className="skip-link" href="#main">Lewati ke konten utama</a>
-        <noscript dangerouslySetInnerHTML={{ __html: '<style>.reveal{opacity:1!important;transform:none!important}</style>' }} />
 
         <header className="site-header">
           <UtilityBar />
@@ -113,9 +118,10 @@ export default function RootLayout({ children }) {
 
         <SiteFooter />
         <FabStack />
-        <ConsultModal />
+        <ProductExperience />
         <ToastHost />
-        <RevealOnScroll />
+        <PWARegister />
+        <InstallApp />
       </body>
     </html>
   );

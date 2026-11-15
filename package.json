@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "ratecard": "node scripts/generate-ratecard.mjs"
   },
   "dependencies": {
     "next": "^16.4.6",

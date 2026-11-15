@@ -12,6 +12,7 @@ Portfolio sebagai **IT Solution Developer** yang berkecimpung di berbagai solusi
 npm install
 npm run dev      # development → http://localhost:3000
 npm run build    # static export → folder out/
+npm run ratecard # regenerate PDF ratecard (harga dasar termurah) → public/assets/docs/ratecard-arifpermana.pdf
 ```
 
 Deploy: Vercel (preset Next.js otomatis — `output: 'export'` menghasilkan static site dari folder `out/`).
@@ -36,5 +37,8 @@ Deploy: Vercel (preset Next.js otomatis — `output: 'export'` menghasilkan stat
 - **Katalog Produk Sistem** — 11 produk (data diambil dari [kafeinarts.web.id/products](https://kafeinarts.web.id/products/), di-rebrand "Sistem"); filter Sistem/Website; tanpa harga — negosiasi langsung via WhatsApp.
 - **ConsultModal (useReducer)** — form konsultasi produk (preselect dari tombol kartu) → buka `wa.me/6285817048266` untuk diskusi & negosiasi.
 - **ContactForm (useState)** — validasi inline → pesan langsung terbuka di WhatsApp.
+- **Ratecard PDF formal** — dokumen penawaran korporat (nomor dokumen, ketentuan, tanda tangan, kontak WA/email) dengan harga dasar termurah tiap produk; dipakai untuk dikirim ke customer/klien.
+- **PWA installable** — manifest lengkap (icon 192/512 + maskable, theme/background color, standalone), service worker (network-first navigasi + cache-first aset, fallback `/offline.html`), tombol Install di desktop & HP, `display-mode: standalone`.
+- **SPA feel** — navigasi antar halaman client-side (tanpa full reload, `app/template.jsx` memberi transisi halus & scroll-to-top otomatis).
 - **SEO & Metadata API** — `metadata` per halaman (title template, description, OG, Twitter, canonical), JSON-LD `Person` + `WebSite`, `sitemap.xml`, `robots.txt`, `site.webmanifest`, `lang="id"`, skip-link.
 - **Home & About yang rapi** — hero split dengan dashboard mock, stack chips, KPI band; About dengan caption photo overlay, fact grid 2×2, dan cerita terstruktur.

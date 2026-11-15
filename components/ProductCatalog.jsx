@@ -18,9 +18,9 @@ function ProductCard({ p }) {
         {(p.highlights || []).slice(0, 3).map((h) => <li key={h} className="chip">{h}</li>)}
       </ul>
       <div className="product-price">
-        <a className="detail-link" href={p.detailUrl} target="_blank" rel="noopener noreferrer">
-          Detail produk <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-        </a>
+        <button type="button" className="btn btn-outline product-detail-btn" data-product-detail={p.slug}>
+          Detail Produk <i className="bi bi-arrow-right-short" aria-hidden="true"></i>
+        </button>
       </div>
       <button
         type="button"

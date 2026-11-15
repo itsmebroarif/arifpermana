@@ -21,10 +21,10 @@ const SERVICES = [
 ];
 
 const STEPS = [
-  { n: '1', icon: 'bi-grid-3x3-gap', color: '#047857', title: 'Pilih Produk', text: 'Pilih produk dari katalog di bawah, atau request custom sesuai kebutuhan.' },
-  { n: '2', icon: 'bi-ui-checks', color: '#0f766e', title: 'Isi Form', text: 'Isi nama, no. WhatsApp, dan catatan kebutuhan Anda — kurang dari 1 menit.' },
-  { n: '3', icon: 'bi-whatsapp', color: '#be123d', title: 'Terhubung ke WA', text: 'Pesan otomatis tersusun rapi dan langsung terbuka di WhatsApp saya untuk negosiasi.' },
-  { n: '4', icon: 'bi-handshake', color: '#b45309', title: 'Konsultasi & Deal', text: 'Kita diskusi scope, timeline, dan penawaran harga — lalu mulai dikerjakan.' },
+  { n: '1', icon: 'bi-grid-3x3-gap', color: '#047857', title: 'Pilih Produk', text: 'Pilih produk yang ingin Anda konsultasikan — ERP, SIMRS, CMS, LMS, dan lainnya.' },
+  { n: '2', icon: 'bi-ui-checks-grid', color: '#0f766e', title: 'Centang Fitur', text: 'Centang fitur yang Anda butuhkan, atau tulis kebutuhan tambahan Anda sendiri.' },
+  { n: '3', icon: 'bi-person-vcard', color: '#be123d', title: 'Isi Biodata', text: 'Nama, no. WhatsApp, bisnis/instansi, email, dan kota — kurang dari 1 menit.' },
+  { n: '4', icon: 'bi-send-check', color: '#b45309', title: 'Ringkasan & Kirim', text: 'Cek ringkasan order, lalu kirim langsung ke WhatsApp atau unduh Ratecard PDF.' },
 ];
 
 export default function ServicesPage() {
@@ -58,10 +58,13 @@ export default function ServicesPage() {
             <span className="eyebrow"><span className="dot"></span> Katalog Produk</span>
             <h2 id="produk-title">Produk <span className="gradient-text">Sistem</span> siap pesan</h2>
             <p>
-              Katalog diambil langsung dari{' '}
-              <a href="https://kafeinarts.web.id/products/" target="_blank" rel="noopener noreferrer">kafeinarts.web.id/products</a>
-              {' '}dan dibranding sebagai <strong>Sistem</strong>. Tidak ada harga kaku — semua bisa didiskusikan &amp; negosiasi langsung di WhatsApp.
+              Detail setiap produk ada di halaman ini — klik <strong>Detail Produk</strong> untuk melihat fitur lengkap. Tidak ada harga kaku: harga final disepakati saat project berjalan.
             </p>
+            <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap', marginTop: '.8rem' }}>
+              <a className="btn btn-outline" href="/assets/docs/ratecard-arifpermana.pdf" download style={{ padding: '.48rem .9rem', fontSize: '.82rem' }}>
+                <i className="bi bi-file-earmark-pdf" aria-hidden="true"></i> Unduh Ratecard (PDF)
+              </a>
+            </div>
           </div>
 
           <ProductCatalog withFilter showAll />

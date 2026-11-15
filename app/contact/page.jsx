@@ -24,14 +24,21 @@ export default function ContactPage() {
           <p>Isi formulir di bawah — sekali klik, pesannya langsung terbuka di WhatsApp saya (<strong>0858-1704-8266</strong>) untuk negosiasi. Respons cepat, biasanya di hari yang sama.</p>
         </div>
 
-        <div className="map-frame reveal" style={{ marginBottom: '1.25rem' }}>
-          <iframe
-            title="Lokasi — Depok, Jawa Barat"
-            src="https://maps.google.com/maps?q=Depok,%20West%20Java,%20Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
+        <div className="map-card reveal" role="region" aria-label="Lokasi — Depok, Jawa Barat">
+          <div className="map-card-pin"><i className="bi bi-geo-alt-fill" aria-hidden="true"></i></div>
+          <div className="map-card-body">
+            <small>LOKASI SAYA</small>
+            <h3>Depok, Jawa Barat</h3>
+            <p>Perumahan Sukamaju Permai, Jl. Sukamaju Permai Blok B1 Ujung, Rt.01 Rw.28 No.13, Cilodong, Depok 16415 · -6.4025, 106.7942</p>
+            <a
+              className="btn btn-outline map-card-btn"
+              href="https://www.google.com/maps/search/?api=1&query=Depok,%20West%20Java,%20Indonesia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-map" aria-hidden="true"></i> Buka di Google Maps <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
 
         <div className="contact-grid">
