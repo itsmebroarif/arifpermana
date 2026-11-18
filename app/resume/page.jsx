@@ -1,11 +1,16 @@
+import { siteOg } from '../../lib/og';
+
 export const metadata = {
-  title: 'Resume — IT Solution Developer',
+  title: 'Resume — Web Developer & Software Engineer',
   description:
-    'Resume Arif Permana Putrasuryana: IT Solution Developer open to work (onsite & remote). Berpengalaman mengembangkan ERP, EMS, CMS, LMS, dan SIMRS — di antaranya dibangun di PT. Sintasi Persada Teknologi (2025–2026) dengan Laravel, Vue.js, Quasar.',
+    'Resume Arif Permana Putrasuryana (itsmebroarif) — Web Developer & Software Engineer di Depok, open to work (onsite & remote). Berpengalaman mengembangkan ERP, EMS, CMS, LMS, dan SIMRS dengan Laravel, Vue.js, Quasar & Next.js.',
+  keywords: ['Resume Web Developer Depok', 'Software Engineer Depok', 'CV Arif Permana Putrasuryana', 'itsmebroarif'],
   alternates: { canonical: '/resume' },
   openGraph: {
+    ...siteOg,
+    url: '/resume',
     title: 'Resume — Arif Permana Putrasuryana',
-    description: 'IT Solution Developer — ERP, EMS, CMS, LMS & SIMRS. Open to work — onsite & remote.',
+    description: 'Web Developer & Software Engineer di Depok — ERP, EMS, CMS, LMS & SIMRS. Open to work — onsite & remote.',
   },
 };
 
@@ -164,7 +169,7 @@ export default function ResumePage() {
         <div className="section-title left reveal">
           <span className="eyebrow"><span className="dot"></span> Resume</span>
           <h2 id="resume-title">Perjalanan <span className="gradient-text">profesional</span> saya</h2>
-          <p>Seorang IT Solution developer dengan pengalaman dalam berbagai proyek — ERP, EMS, CMS, LMS, SIMRS, pengembangan web dan aplikasi, serta sistem manajemen basis data. Lulusan Rekayasa Perangkat Lunak (SMK) dengan sertifikasi yang relevan di bidang teknologi informasi.</p>
+          <p>Web Developer &amp; Software Engineer di Depok dengan pengalaman dalam berbagai proyek — ERP, EMS, CMS, LMS, SIMRS, pengembangan web dan aplikasi, serta sistem manajemen basis data. Lulusan Rekayasa Perangkat Lunak (SMK) dengan sertifikasi yang relevan di bidang teknologi informasi.</p>
           <a className="btn btn-outline" href={cvHref} target="_blank" rel="noopener noreferrer" style={{ marginTop: '1rem' }}>
             <i className="bi bi-file-earmark-pdf" aria-hidden="true"></i> Download CV (PDF)
           </a>
@@ -178,7 +183,7 @@ export default function ResumePage() {
               <h4>Arif Permana Putrasuryana</h4>
               <span className="t-meta"><i className="bi bi-geo-alt" aria-hidden="true"></i> Depok, Jawa Barat · (+62) 858-1704-8266 · aripstrike@gmail.com</span>
               <p style={{ fontSize: '.9rem', marginBottom: 0 }}>
-                <em>Inovatif dan bekerja dengan tenggat waktu — IT Solution developer dengan pengalaman lebih dari 4 tahun merancang, mengembangkan, dan merilis produk digital yang berpusat pada pengguna, mulai dari konsep awal hingga hasil akhir yang sempurna.</em>
+                <em>Inovatif dan bekerja dengan tenggat waktu — Web Developer &amp; Software Engineer dengan pengalaman lebih dari 4 tahun merancang, mengembangkan, dan merilis produk digital yang berpusat pada pengguna, mulai dari konsep awal hingga hasil akhir yang sempurna.</em>
               </p>
             </article>
 

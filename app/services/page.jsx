@@ -1,13 +1,17 @@
 import ProductCatalog from '../../components/ProductCatalog';
+import { siteOg } from '../../lib/og';
 
 export const metadata = {
-  title: 'Produk & Layanan — IT Solution & Web Development',
+  title: 'Jasa Pengembang Software & Web Depok',
   description:
-    'Layanan IT solution & pengembangan web: ERP, EMS, CMS, LMS, SIMRS, e-commerce, company profile, landing page, backend, cloud, keamanan sistem — serta katalog Produk Sistem. Diskusi langsung via WhatsApp 0858-1704-8266.',
+    'Jasa pengembang software dan web di Depok — Arif Permana Putrasuryana. Website company profile, landing page, e-commerce, ERP, EMS, CMS, LMS, SIMRS & aplikasi custom dengan Laravel, Vue.js, Quasar. Konsultasi gratis via WhatsApp 0858-1704-8266.',
+  keywords: ['Jasa Pengembang Software dan Web di Depok', 'Jasa Pembuatan Website Depok', 'Web Developer Depok', 'Software Engineer Depok', 'Jasa IT Solution Depok', 'ERP', 'SIMRS', 'itsmebroarif'],
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Produk & Layanan — IT Solution & Web Development',
-    description: 'IT Solution & produk sistem: ERP, EMS, CMS, LMS, SIMRS, dan lainnya.',
+    ...siteOg,
+    url: '/services',
+    title: 'Jasa Pengembang Software & Web Depok — Arif Permana',
+    description: 'Jasa pengembang software & web di Depok: ERP, EMS, CMS, LMS, SIMRS, website perusahaan, landing page & aplikasi custom.',
   },
 };
 
@@ -35,8 +39,8 @@ export default function ServicesPage() {
         <div className="container">
           <div className="section-title left reveal">
             <span className="eyebrow"><span className="dot"></span> Layanan</span>
-            <h2 id="services-title">Solusi digital yang <span className="gradient-text">end-to-end</span></h2>
-            <p>Dari perencanaan hingga rilis — saya bantu wujudkan kebutuhan digital Anda, dari website company profile hingga IT solution berskala instansi: ERP, EMS, CMS, LMS, dan SIMRS.</p>
+            <h2 id="services-title">Jasa pengembang software dan web <span className="gradient-text">di Depok</span></h2>
+            <p>Jasa pengembang software dan web di Depok — dari perencanaan hingga rilis. Saya bantu wujudkan kebutuhan digital Anda: website company profile, landing page, e-commerce, ERP, EMS, CMS, LMS, SIMRS, hingga aplikasi custom. Onsite (Depok &amp; Bodetabek) maupun remote.</p>
           </div>
 
           <div className="grid grid-3">

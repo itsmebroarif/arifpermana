@@ -2,9 +2,11 @@
 import Link from 'next/link';
 
 const SOCIALS = [
-  { href: 'https://itsmebroarif.medium.com', label: 'Medium', icon: 'bi-medium' },
+  { href: 'https://github.com/itsmebroarif', label: 'GitHub', icon: 'bi-github' },
   { href: 'https://www.instagram.com/eexxvvn/', label: 'Instagram', icon: 'bi-instagram' },
+  { href: 'https://www.facebook.com/arif.alexander.56/', label: 'Facebook', icon: 'bi-facebook' },
   { href: 'https://www.linkedin.com/in/arif-permana-putrasuryana-121b761b9/', label: 'LinkedIn', icon: 'bi-linkedin' },
+  { href: 'https://itsmebroarif.medium.com', label: 'Medium', icon: 'bi-medium' },
   { href: 'https://wa.me/6285817048266', label: 'WhatsApp', icon: 'bi-whatsapp' },
 ];
 
@@ -26,15 +28,16 @@ export default function SiteFooter() {
         <div className="footer-grid">
           <div>
             <Link className="logo" href="/" style={{ marginBottom: '.6rem' }} aria-label="Arif Permana — Beranda">
-              <span className="logo-badge" aria-hidden="true">AP</span>
+              <img className="logo-badge-img" src="/assets/img/logo.svg" alt="" width="34" height="34" />
               <span style={{ color: '#fff' }}>Arif<span style={{ color: '#34d399' }}>.</span></span>
             </Link>
             <p style={{ color: '#a9bfb0', fontSize: '.9rem' }}>
-              Saya adalah seorang IT Solution developer yang fleksibel dan siap bekerja secara
-              {' '}<strong style={{ color: '#fff' }}>onsite maupun remote development</strong> — apa pun kebutuhan IT Anda:
-              {' '}<strong style={{ color: '#fff' }}>ERP, EMS, CMS, LMS, SIMRS</strong>, website, maupun aplikasi custom.
-              Dibangun dengan Laravel, Vue.js &amp; Quasar. Sebelumnya mengerjakan SIMRS di PT. Sintasi Persada Teknologi;
-              {' '}kini <strong style={{ color: '#fff' }}>open to work</strong>. Berbasis di Depok, Jawa Barat.
+              <strong style={{ color: '#fff' }}>Web Developer &amp; Software Engineer di Depok</strong> —
+              jasa pengembang software dan web yang fleksibel dan siap bekerja secara
+              {' '}<strong style={{ color: '#fff' }}>onsite maupun remote</strong> — apa pun kebutuhan IT Anda:
+              {' '}<strong style={{ color: '#fff' }}>ERP, EMS, CMS, LMS, SIMRS</strong>, website perusahaan, landing page, maupun aplikasi custom.
+              Dibangun dengan Laravel, Vue.js &amp; Quasar. Berbasis di Cilodong, Depok, Jawa Barat.
+              Ikuti <strong style={{ color: '#fff' }}>itsmebroarif</strong> di GitHub, Instagram, Facebook &amp; LinkedIn.
             </p>
             <div className="footer-social">
               {SOCIALS.map((s) => (

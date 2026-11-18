@@ -1,11 +1,20 @@
 import Link from 'next/link';
 import PhotoWithFallback from '../../components/PhotoWithFallback';
 
+import { siteOg } from '../../lib/og';
+
 export const metadata = {
-  title: 'About — IT Solution Developer',
+  title: 'Tentang — Web Developer & Software Engineer',
   description:
-    'Tentang Arif Permana Putrasuryana: IT Solution Developer open to work (onsite & remote). Berpengalaman mengerjakan ERP, EMS, CMS, LMS, SIMRS, dan aplikasi bisnis lainnya dengan Laravel, Vue.js, dan Quasar.',
+    'Tentang Arif Permana Putrasuryana (itsmebroarif) — Web Developer & Software Engineer di Depok. Jasa pengembang software & web: ERP, EMS, CMS, LMS, SIMRS, website perusahaan & landing page dengan Laravel, Vue.js, Quasar dan Next.js. Open to work — onsite & remote.',
+  keywords: ['Arif Permana Putrasuryana', 'itsmebroarif', 'Web Developer Depok', 'Software Engineer Depok', 'Jasa Pengembang Software dan Web di Depok'],
   alternates: { canonical: '/about' },
+  openGraph: {
+    ...siteOg,
+    url: '/about',
+    title: 'Tentang Arif Permana Putrasuryana — Web Developer & Software Engineer Depok',
+    description: 'Web Developer & Software Engineer di Depok — jasa pengembang software & web: ERP, CMS, LMS, SIMRS, website perusahaan & landing page dengan Laravel, Vue.js, Quasar & Next.js.',
+  },
 };
 
 const FACTS = [
@@ -51,8 +60,8 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-title left reveal">
             <span className="eyebrow"><span className="dot"></span> Tentang Saya</span>
-            <h2 id="about-title">IT Solution Developer &amp; <span className="gradient-text">UI/UX Enthusiast</span></h2>
-            <p>Saya berfokus pada pengembangan web dan aplikasi — dari backend yang kokoh hingga antarmuka yang rapi dan user friendly. Mengerjakan berbagai solusi teknologi: <strong>ERP, EMS, CMS, LMS</strong>, dan <strong>SIMRS</strong> — salah satunya SIMRS di PT. Sintasi Persada Teknologi (rumah sakit, klinik, puskesmas, labkesda, serta tempat praktek mandiri dokter dan bidan).</p>
+            <h2 id="about-title">Web Developer &amp; Software Engineer &amp; <span className="gradient-text">UI/UX Enthusiast</span></h2>
+            <p>Web Developer &amp; Software Engineer di Depok — jasa pengembang software dan web yang berfokus pada pengembangan web dan aplikasi: dari backend yang kokoh hingga antarmuka yang rapi dan user friendly. Mengerjakan berbagai solusi teknologi: <strong>ERP, EMS, CMS, LMS</strong>, dan <strong>SIMRS</strong> — salah satunya SIMRS di PT. Sintasi Persada Teknologi (rumah sakit, klinik, puskesmas, labkesda, serta tempat praktek mandiri dokter dan bidan).</p>
           </div>
 
           <div className="about-grid">
@@ -62,7 +71,7 @@ export default function AboutPage() {
                 <PhotoWithFallback />
                 <figcaption className="about-photo-caption">
                   <strong>Arif Permana Putrasuryana</strong>
-                  <small>IT Solution Developer — Depok, ID</small>
+                  <small>Web Developer &amp; Software Engineer — Depok, ID</small>
                 </figcaption>
               </figure>
 

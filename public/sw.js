@@ -5,7 +5,7 @@
  *  - Aset statis (/_next, /assets): cache-first, populate on miss
  *  - Hanya untuk same-origin & method GET
  */
-const VERSION = 'v2-2026-11-15';
+const VERSION = 'v3-2026-11-18';
 const PAGES_CACHE = `arif-pages-${VERSION}`;
 const STATIC_CACHE = `arif-static-${VERSION}`;
 

@@ -1,10 +1,18 @@
 import ContactForm from '../../components/ContactForm';
+import { siteOg } from '../../lib/og';
 
 export const metadata = {
-  title: 'Contact — Diskusi Proyek via WhatsApp',
+  title: 'Contact — Web Developer & Software Engineer Depok',
   description:
-    'Hubungi Arif Permana Putrasuryana untuk konsultasi proyek — website, ERP, EMS, CMS, LMS, SIMRS, atau solusi IT lainnya. WhatsApp 0858-1704-8266, email aripstrike@gmail.com — di Depok, Jawa Barat.',
+    'Hubungi Arif Permana Putrasuryana (itsmebroarif) — jasa pengembang software & web di Depok. Konsultasi proyek: website, ERP, EMS, CMS, LMS, SIMRS. WhatsApp 0858-1704-8266, email aripstrike@gmail.com — Cilodong, Depok.',
+  keywords: ['Contact Arif Permana', 'Jasa Pengembang Software dan Web di Depok', 'Web Developer Depok', 'konsultasi website Depok', 'itsmebroarif'],
   alternates: { canonical: '/contact' },
+  openGraph: {
+    ...siteOg,
+    url: '/contact',
+    title: 'Contact — Arif Permana | Web Developer & Software Engineer Depok',
+    description: 'Hubungi Arif Permana Putrasuryana — jasa pengembang software & web di Depok. Konsultasi proyek: website, ERP, CMS, LMS, SIMRS. WhatsApp 0858-1704-8266.',
+  },
 };
 
 const INFO = [

@@ -1,13 +1,13 @@
 {
-  "name": "Arif Permana — IT Solution Developer",
-  "short_name": "Arif AP",
-  "description": "Portfolio & produk Sistem (ERP, EMS, CMS, LMS, SIMRS, dll). Cek produk dan order langsung — tanpa aplikasi tambahan.",
+  "name": "Arif Permana — Web Developer & Software Engineer Depok",
+  "short_name": "Arif Permana",
+  "description": "Jasa pengembang software & web di Depok: ERP, EMS, CMS, LMS, SIMRS, website perusahaan & landing page. Cek produk dan order langsung — tanpa aplikasi tambahan.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#f8fafc",
-  "theme_color": "#059669",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "lang": "id-ID",
   "categories": ["business", "productivity", "developer"],
   "icons": [

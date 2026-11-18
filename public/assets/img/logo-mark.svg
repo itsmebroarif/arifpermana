@@ -1,0 +1,35 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+  <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1c2942"/>
+    <stop offset="1" stop-color="#0b1120"/>
+  </linearGradient>
+  <radialGradient id="sheen" cx="0.5" cy="0.18" r="0.9">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+    <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.03"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="glyph" gradientUnits="userSpaceOnUse" x1="200" y1="740" x2="880" y2="280">
+    <stop offset="0" stop-color="#059669"/>
+    <stop offset="0.38" stop-color="#10b981"/>
+    <stop offset="0.72" stop-color="#34d399"/>
+    <stop offset="1" stop-color="#8bf0c4"/>
+  </linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="26" result="b"/>
+    <feMerge>
+      <feMergeNode in="b"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+  
+  <g fill="none" stroke="url(#glyph)" stroke-width="84" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 172 732 L 356 292 L 540 732"/>
+    <path d="M 249 582 H 463"/>
+    <path d="M 622 732 V 292"/>
+    <path d="M 622 292 H 742 A 118 118 0 0 1 742 528 H 622"/>
+  </g>
+
+</svg>

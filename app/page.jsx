@@ -1,12 +1,26 @@
 import Link from "next/link";
 import MockShowcase from "../components/MockShowcase";
 import ProductCatalog from "../components/ProductCatalog";
+import { siteOg } from "../lib/og";
 
 export const metadata = {
-  title: "IT Solution Developer — ERP, EMS, CMS, LMS & SIMRS",
+  title: {
+    absolute: 'Arif Permana — Web Developer & Software Engineer Depok',
+  },
   description:
-    "Portfolio Arif Permana Putrasuryana — IT Solution Developer yang open to work (onsite & remote) di Depok, Indonesia. Berpengalaman mengerjakan ERP, EMS, CMS, LMS, SIMRS, dan aplikasi bisnis lainnya dengan Laravel, Vue.js, dan Quasar.",
-  alternates: { canonical: "/" },
+    'Jasa pengembang software & web di Depok — Arif Permana Putrasuryana, Web Developer & Software Engineer. ERP, EMS, CMS, LMS, SIMRS, company profile & landing page dengan Laravel, Vue.js, Quasar. Konsultasi gratis via WhatsApp!',
+  keywords: [
+    'Web Developer Depok', 'Software Engineer Depok', 'Jasa Pengembang Software dan Web di Depok',
+    'Jasa Pembuatan Website Depok', 'Arif Permana Putrasuryana', 'itsmebroarif',
+  ],
+  alternates: { canonical: '/' },
+  openGraph: {
+    ...siteOg,
+    url: '/',
+    title: 'Arif Permana — Web Developer & Software Engineer di Depok',
+    description:
+      'Jasa pengembang software & web di Depok: ERP, EMS, CMS, LMS, SIMRS, website perusahaan & landing page. Konsultasi gratis via WhatsApp 0858-1704-8266.',
+  },
 };
 
 const HIGHLIGHTS = [
@@ -30,11 +44,48 @@ const HIGHLIGHTS = [
   },
 ];
 
-const TRUST = ["Laravel", "Vue.js", "Quasar", "MySQL", "Git", "Linux"];
+const TRUST = ["Laravel", "Vue.js", "Quasar", "Next.js", "MySQL", "Git"];
+
+const FAQ = [
+  {
+    q: 'Siapa Arif Permana Putrasuryana (itsmebroarif)?',
+    a: 'Arif Permana Putrasuryana — dikenal di GitHub & internet dengan handle itsmebroarif — adalah Web Developer & Software Engineer berbasis di Cilodong, Depok, Jawa Barat. 4+ tahun pengalaman membangun ERP, EMS, CMS, LMS, SIMRS, website perusahaan, landing page, dan aplikasi custom dengan Laravel, Vue.js, Quasar, dan Next.js. Open to work, onsite maupun remote.',
+  },
+  {
+    q: 'Jasa pengembang software dan web di Depok apa saja yang tersedia?',
+    a: 'Jasa pengembang software dan web di Depok yang tersedia: pembuatan website company profile, landing page, portal berita, e-commerce, sistem ERP, EMS (Event Management System), CMS, LMS, SIMRS untuk rumah sakit/klinik/puskesmas, dashboard internal, REST API & integrasi (SATUSEHAT, payment gateway, WhatsApp), PWA, hingga aplikasi desktop (Electron.js).',
+  },
+  {
+    q: 'Berapa biaya jasa pembuatan website dan software?',
+    a: 'Biaya tergantung scope (fitur, desain, integrasi). Landing page dan company profile mulai dari harga terjangkau, sedangkan sistem seperti ERP/SIMRS/LMS dihitung per modul. Konsultasi kebutuhan dan penawaran resmi selalu gratis dan transparan — langsung chat WhatsApp 0858-1704-8266, biasanya dibalas di hari yang sama.',
+  },
+  {
+    q: 'Apakah bisa kerja sama dengan klien di luar Depok?',
+    a: 'Tentu bisa. Kerja sama onsite mencakup Depok, Jakarta, Bogor, Bekasi (Bodetabek) dan sekitarnya, sedangkan klien dari mana pun di Indonesia dapat bekerja sama secara remote (video call, WhatsApp, laporan progress berkala).',
+  },
+  {
+    q: 'Tech stack apa yang digunakan?',
+    a: 'Backend: Laravel (PHP), MySQL. Frontend: Vue.js 3, Quasar Framework, Next.js/React, TypeScript. Lainnya: REST API, PWA, Docker/CI-CD, dan integrasi SATUSEHAT untuk sistem kesehatan. Satu orang, satu alur kerja end-to-end — minim miskomunikasi.',
+  },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ======= Hero ======= */}
       <section className="hero" aria-labelledby="hero-title">
         <div className="container hero-grid">
@@ -49,12 +100,11 @@ export default function HomePage() {
               <span className="gradient-text">Putrasuryana</span>
             </h1>
             <p className="lead">
-              IT Solution Developer yang membangun{" "}
-              <strong>
-                solusi teknologi end-to-end — rapi, cepat, dan berdampak
-              </strong>{" "}
-              — dari <strong>ERP, EMS, CMS, LMS</strong>, <strong>SIMRS</strong>
-              , hingga website perusahaan.
+              <strong>Web Developer &amp; Software Engineer di Depok</strong>{" "}
+              — <strong>jasa pengembang software dan web</strong> yang
+              membangun solusi teknologi end-to-end — rapi, cepat, dan
+              berdampak — dari <strong>ERP, EMS, CMS, LMS</strong>,{" "}
+              <strong>SIMRS</strong>, hingga website perusahaan.
             </p>
             <div className="hero-cta">
               <button
@@ -187,6 +237,34 @@ export default function HomePage() {
               <i className="bi bi-grid-3x3-gap" aria-hidden="true"></i> Lihat
               Semua 11 Produk
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ======= FAQ ======= */}
+      <section className="section" aria-labelledby="faq-title">
+        <div className="container" style={{ maxWidth: "880px" }}>
+          <div className="section-title left reveal">
+            <span className="eyebrow">
+              <span className="dot"></span> Tanya Jawab
+            </span>
+            <h2 id="faq-title">
+              Jasa pengembang software dan web{" "}
+              <span className="gradient-text">di Depok</span>
+            </h2>
+          </div>
+          <div className="faq-list">
+            {FAQ.map((item) => (
+              <details className="faq-item reveal" key={item.q}>
+                <summary>
+                  {item.q}
+                  <i className="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                </summary>
+                <div className="faq-answer">
+                  <p>{item.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

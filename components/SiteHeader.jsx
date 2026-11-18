@@ -18,8 +18,9 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { href: 'https://itsmebroarif.medium.com', label: 'Medium', icon: 'bi-medium' },
+  { href: 'https://github.com/itsmebroarif', label: 'GitHub', icon: 'bi-github' },
   { href: 'https://www.instagram.com/eexxvvn/', label: 'Instagram', icon: 'bi-instagram' },
+  { href: 'https://www.facebook.com/arif.alexander.56/', label: 'Facebook', icon: 'bi-facebook' },
   { href: 'https://www.linkedin.com/in/arif-permana-putrasuryana-121b761b9/', label: 'LinkedIn', icon: 'bi-linkedin' },
 ];
 
@@ -43,7 +44,7 @@ export default function SiteHeader() {
   return (
     <div className="header-inner">
       <Link className="logo" href="/" aria-label="Arif Permana — Beranda">
-        <span className="logo-badge" aria-hidden="true">AP</span>
+        <img className="logo-badge-img" src="/assets/img/logo.svg" alt="" width="34" height="34" />
         <span>Arif<span className="gradient-text">.</span></span>
       </Link>
 
